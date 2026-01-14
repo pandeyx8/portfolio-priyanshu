@@ -1,0 +1,54 @@
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { HiArrowRight, HiCode } from 'react-icons/hi';
+import { motion } from 'framer-motion';
+import { config } from '@/config';
+import { titleAnimation } from './Animations';
+
+const SectionTitle = () => (
+    <motion.div
+        initial="hidden"
+        animate="show"
+        variants={titleAnimation}
+        className="mb-16 space-y-6"
+    >
+
+        <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
+            <div className="space-y-4 max-w-2xl">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary tracking-tight">
+                    Featured Work & Projects
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    A collection of my projects as a fresher,
+                    showcasing skills in{' '}
+                    <span className="text-primary">web development</span>,{' '}
+                    <span className="text-primary">frontend design</span>, and{' '}
+                    <span className="text-primary">interactive applications</span>.
+                </p>
+            </div>
+
+            <div className="flex items-center">
+                <Button
+                    variant="expandIcon"
+                    Icon={HiArrowRight}
+                    iconPlacement="right"
+                    className="w-full md:w-auto rounded-2xl px-4 sm:px-5 py-5 sm:py-6 text-sm sm:text-base transition-all duration-300 shadow-lg shadow-primary/5 hover:shadow-primary/10"
+                    asChild
+                >
+                    <a
+                        href={`https://github.com/${config.social.github}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-medium"
+                    >
+                        View Github
+                    </a>
+                </Button>
+            </div>
+        </div>
+
+        <div className="h-px w-full bg-gradient-to-r from-primary/5 via-primary/20 to-primary/5" />
+    </motion.div>
+);
+
+export default SectionTitle;
