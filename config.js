@@ -21,7 +21,7 @@ export const config = {
             image: "/projects/project-1.png",
             technologies: ["HTML", "CSS", "JavaScript"],
             github: "https://github.com/pandeyx8/frontend-clone--amazon-",
-            demo: "#"
+            demo: "https://pandeyx8.github.io/frontend-clone--amazon-/"
         },
         {
             id: 2,
