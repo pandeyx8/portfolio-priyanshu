@@ -34,12 +34,12 @@ export const config = {
         },
         {
             id: 3,
-            title: "DSA Practice Tracker",
-            description: "A simple web app to track solved DSA problems and progress across platforms like LeetCode and CodeChef.",
-            image: "/projects/project-3.webp",
-            technologies: ["JavaScript", "React"],
-            github: "#",
-            demo: "#"
+            title: "Color Change Game",
+            description: "A fun browser game where players quickly match changing color prompts, testing reaction speed and focus with smooth interactive gameplay.",
+            image: "/projects/color-change.png",
+            technologies: ["HTML", "CSS", "JavaScript"],
+            github: "https://github.com/pandeyx8/change-color-game",
+            demo: "https://color-change-game.vercel.app/"
         }
     ],
     skills: [
@@ -126,7 +126,7 @@ export const config = {
             id: 2,
             platform: "CodeForces",
             username: "pandey_x8",
-            rating: "1100+",
+            rating: "Pupil",
             stats: "",
             link: "https://codeforces.com/profile/pandey_x8"
         },
@@ -134,7 +134,7 @@ export const config = {
             id: 3,
             platform: "Code Chef",
             username: "pandeyxd",
-            rating: "1700+",
+            rating: "3-Star",
             stats: "",
             link: "https://www.codechef.com/users/pandeyxd"
         },

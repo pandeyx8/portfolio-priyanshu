@@ -4,7 +4,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { HiCode } from 'react-icons/hi';
 import { FaReact, FaGithub } from 'react-icons/fa';
-import { SiJavascript, SiPython, SiC, SiCanva, SiGit, SiHtml5, SiCss3 } from 'react-icons/si';
+import {
+    SiJavascript,
+    SiPython,
+    SiC,
+    SiCanva,
+    SiGit,
+    SiHtml5,
+    SiCss3,
+    SiNodedotjs,
+    SiExpress,
+    SiPostman,
+} from 'react-icons/si';
 
 // Categorized skills ordered by importance (top to bottom within each column)
 const skillColumns = [
@@ -21,6 +32,8 @@ const skillColumns = [
         title: "Frameworks",
         items: [
             { name: "React", icon: <FaReact className="w-6 h-6" /> },
+            { name: "Node.js", icon: <SiNodedotjs className="w-6 h-6" /> },
+            { name: "Express", icon: <SiExpress className="w-6 h-6" /> },
             { name: "HTML", icon: <SiHtml5 className="w-6 h-6" /> },
             { name: "CSS", icon: <SiCss3 className="w-6 h-6" /> },
         ],
@@ -30,6 +43,7 @@ const skillColumns = [
         items: [
             { name: "Git", icon: <SiGit className="w-6 h-6" /> },
             { name: "GitHub", icon: <FaGithub className="w-6 h-6" /> },
+            { name: "Postman", icon: <SiPostman className="w-6 h-6" /> },
             { name: "Canva", icon: <SiCanva className="w-6 h-6" /> },
         ],
     },

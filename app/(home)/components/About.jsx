@@ -89,7 +89,7 @@ const About = () => {
                                 </div>
                                 <div className="pt-4 border-t border-white/10">
                                     <p className="text-base text-white/80">
-                                        <span className="font-semibold">CGPA:</span> 7.43
+                                        <span className="font-semibold">CGPA:</span> 7.5
                                     </p>
                                 </div>
                                 <div className="pt-4 border-t border-white/10">

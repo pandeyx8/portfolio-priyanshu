@@ -15,18 +15,26 @@ const ContactForm = ({ onSubmit }) => {
   } = useForm();
 
   const formRef = useRef();
-//   console.log(`env : ${process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID}`)
 
   const onSubmitHandler = async (data) => {
-    await onSubmit(data);
-    await emailjs.sendForm(
-      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-      formRef.current,
-      process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-    );
+    try {
+      // Send email using EmailJS
+      await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      );
 
-    reset();
+      // Only show success if email was sent successfully
+      await onSubmit(data);
+      
+      // Reset form after successful submission
+      reset();
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      throw error; // Re-throw to let the parent handler know it failed
+    }
   };
 
   return (

@@ -157,7 +157,12 @@ const ContactButton = ({ isMobile = false, onLinkClick }) => (
         transition={{ delay: isMobile ? 0.5 : 0.4, duration: 0.5 }}
         onClick={onLinkClick}
     >
-        <Link href={"/"} className={isMobile ? 'w-full' : ''}>
+        <Link
+            href={"https://drive.google.com/file/d/1snLPTm0om8BMFaJTOsqXz5XQeg9gyotl/view?usp=sharing"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={isMobile ? 'w-full' : ''}
+        >
             <Button className={`${isMobile ? 'w-full' : ''} rounded-2xl font-semibold bg-white text-gray-900 hover:bg-gray-200 text-xs sm:text-sm px-3 sm:px-4 py-1.5 sm:py-2`}>
                 <span className="hidden sm:inline">Resume</span>
                 <span className="sm:hidden">Resume</span>

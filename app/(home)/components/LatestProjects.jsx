@@ -7,6 +7,7 @@ import { HiExternalLink } from 'react-icons/hi';
 import { Button } from '@/components/ui/button';
 import { config } from '@/config';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const containerAnimation = {
     hidden: { opacity: 0 },
@@ -120,7 +121,17 @@ const LatestProjects = () => {
                                                 {/* Header with Icon and External Link */}
                                                 <div className="flex items-start justify-between gap-2">
                                                     <div className="flex items-center space-x-2 flex-1 min-w-0">
-                                                        <FaGithub className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
+                                                        {project.image && (
+                                                            <div className="w-6 h-6 rounded-md overflow-hidden border border-white/20 bg-white/5 flex-shrink-0">
+                                                                <Image
+                                                                    src={project.image}
+                                                                    alt={`${project.title} logo`}
+                                                                    width={24}
+                                                                    height={24}
+                                                                    className="w-full h-full object-cover"
+                                                                />
+                                                            </div>
+                                                        )}
                                                         <h3 className="font-bold text-white text-sm sm:text-base truncate">
                                                             {project.title}
                                                         </h3>
