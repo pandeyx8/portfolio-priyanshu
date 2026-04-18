@@ -12,39 +12,43 @@ import {
     SiGit,
     SiHtml5,
     SiCss3,
+    SiMongodb,
+    SiNextdotjs,
     SiNodedotjs,
     SiExpress,
     SiPostman,
 } from 'react-icons/si';
 
-// Categorized skills ordered by importance (top to bottom within each column)
-const skillColumns = [
+// Categorized skills in horizontal grid layout
+const skillCategories = [
     {
-        title: "Languages",
+        title: "Programming Languages",
         items: [
-            { name: "JavaScript", icon: <SiJavascript className="w-6 h-6" /> },
-            { name: "C++", icon: <SiC className="w-6 h-6" /> },
-            { name: "C", icon: <SiC className="w-6 h-6" /> },
-            { name: "Python", icon: <SiPython className="w-6 h-6" /> },
+            { name: "C", icon: <SiC className="w-5 h-5" /> },
+            { name: "C++", icon: <SiC className="w-5 h-5" /> },
+            { name: "Python", icon: <SiPython className="w-5 h-5" /> },
+            { name: "JavaScript", icon: <SiJavascript className="w-5 h-5" /> },
+            { name: "HTML", icon: <SiHtml5 className="w-5 h-5" /> },
+            { name: "CSS", icon: <SiCss3 className="w-5 h-5" /> },
         ],
     },
     {
-        title: "Frameworks",
+        title: "Technologies",
         items: [
-            { name: "React", icon: <FaReact className="w-6 h-6" /> },
-            { name: "Node.js", icon: <SiNodedotjs className="w-6 h-6" /> },
-            { name: "Express", icon: <SiExpress className="w-6 h-6" /> },
-            { name: "HTML", icon: <SiHtml5 className="w-6 h-6" /> },
-            { name: "CSS", icon: <SiCss3 className="w-6 h-6" /> },
+            { name: "React", icon: <FaReact className="w-5 h-5" /> },
+            { name: "Next.js", icon: <SiNextdotjs className="w-5 h-5" /> },
+            { name: "Node.js", icon: <SiNodedotjs className="w-5 h-5" /> },
+            { name: "Express", icon: <SiExpress className="w-5 h-5" /> },
+            { name: "MongoDB", icon: <SiMongodb className="w-5 h-5" /> },
+            { name: "Git", icon: <SiGit className="w-5 h-5" /> },
         ],
     },
     {
-        title: "Tools",
+        title: "Tools & Platforms",
         items: [
-            { name: "Git", icon: <SiGit className="w-6 h-6" /> },
-            { name: "GitHub", icon: <FaGithub className="w-6 h-6" /> },
-            { name: "Postman", icon: <SiPostman className="w-6 h-6" /> },
-            { name: "Canva", icon: <SiCanva className="w-6 h-6" /> },
+            { name: "GitHub", icon: <FaGithub className="w-5 h-5" /> },
+            { name: "Postman", icon: <SiPostman className="w-5 h-5" /> },
+            { name: "Canva", icon: <SiCanva className="w-5 h-5" /> },
         ],
     },
 ];
@@ -74,24 +78,29 @@ const SkillsShowcase = () => {
                     </div>
                 </motion.div>
 
-                {/* Columns by category */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-                    {skillColumns.map((column) => (
-                        <div key={column.title} className="space-y-4">
-                            <h3 className="text-sm sm:text-base font-semibold text-white/80 tracking-wide uppercase">
-                                {column.title}
-                            </h3>
+                {/* Sections by category in horizontal grid */}
+                <div className="space-y-12">
+                    {skillCategories.map((section) => (
+                        <div key={section.title}>
+                            <motion.h3
+                                initial={{ opacity: 0, y: -10 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="text-sm sm:text-base font-semibold text-center text-white/70 mb-6 tracking-wide uppercase"
+                            >
+                                {section.title}
+                            </motion.h3>
 
-                            <div className="grid grid-cols-1 gap-3">
-                                {column.items.map((skill) => (
+                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                                {section.items.map((skill) => (
                                     <motion.div
                                         key={skill.name}
-                                        initial={{ opacity: 0, y: 12 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
+                                        initial={{ opacity: 0, scale: 0.8 }}
+                                        whileInView={{ opacity: 1, scale: 1 }}
                                         viewport={{ once: true }}
                                         className="relative group"
                                     >
-                                        <div className="relative h-full min-h-[110px] bg-black border border-white/20 rounded-xl p-4 sm:p-5 backdrop-blur-md hover:border-white/40 transition-all duration-300 overflow-hidden flex flex-col items-center justify-center shadow-lg shadow-white/5 hover:shadow-xl hover:shadow-primary/20">
+                                        <div className="relative h-full aspect-square bg-black border border-white/20 rounded-xl p-3 backdrop-blur-md hover:border-white/40 transition-all duration-300 overflow-hidden flex flex-col items-center justify-center shadow-lg shadow-white/5 hover:shadow-xl hover:shadow-primary/20">
                                             {/* Inner glow background */}
                                             <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-transparent opacity-40 group-hover:opacity-70 transition-opacity duration-300 pointer-events-none rounded-xl" />
                                             {/* Hover glow effect */}
@@ -99,19 +108,16 @@ const SkillsShowcase = () => {
                                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent shiny-sweep" />
                                             </div>
 
-                                            <div className="relative z-10 flex flex-col items-center gap-3 sm:gap-4 w-full">
+                                            <div className="relative z-10 flex flex-col items-center gap-2 w-full">
                                                 {/* Icon Box */}
-                                                <div className="p-3 sm:p-3.5 rounded-lg border border-white/30 bg-black/50 text-white group-hover:border-white/60 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-white/10">
+                                                <div className="p-2.5 rounded-lg border border-white/30 bg-black/50 text-white group-hover:border-white/60 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-white/10">
                                                     {skill.icon}
                                                 </div>
 
-                                                {/* Skill Name with underline */}
-                                                <div className="flex flex-col items-center gap-2">
-                                                    <span className="text-sm sm:text-base font-bold text-white text-center">
-                                                        {skill.name}
-                                                    </span>
-                                                    <div className="w-6 sm:w-8 h-0.5 bg-blue-500/30 rounded-full group-hover:bg-gradient-to-r group-hover:from-transparent group-hover:via-white/40 group-hover:to-transparent transition-all duration-300" />
-                                                </div>
+                                                {/* Skill Name */}
+                                                <span className="text-xs sm:text-sm font-bold text-white text-center">
+                                                    {skill.name}
+                                                </span>
                                             </div>
                                         </div>
                                     </motion.div>

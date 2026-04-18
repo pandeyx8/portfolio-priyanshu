@@ -40,6 +40,15 @@ export const config = {
             technologies: ["HTML", "CSS", "JavaScript"],
             github: "https://github.com/pandeyx8/change-color-game",
             demo: "https://color-change-game.vercel.app/"
+        },
+        {
+            id: 4,
+            title: "Finance RBAC Backend",
+            description: "Backend API for a finance app with role-based access control, secure authentication, and protected routes for admin and user workflows.",
+            technologies: ["Node.js", "Express", "MongoDB", "JWT"],
+            github: "https://github.com/pandeyx8/finance-rbac-backend",
+            demo: "#",
+            pinned: true
         }
     ],
     skills: [
@@ -65,7 +74,11 @@ export const config = {
             { name: "HTML", level: "Advanced", hot: true },
             { name: "CSS", level: "Advanced" },
             { name: "JavaScript", level: "Intermediate" },
-            { name: "React", level: "Beginner" }
+            { name: "React", level: "Intermediate", hot: true },
+            { name: "Next.js", level: "Intermediate", hot: true },
+            { name: "Node.js", level: "Intermediate", hot: true },
+            { name: "Express", level: "Intermediate" },
+            { name: "MongoDB", level: "Intermediate" }
             ]
         },
         {
@@ -76,7 +89,8 @@ export const config = {
             iconClass: "text-orange-500",
             skills: [
             { name: "Git & GitHub", level: "Intermediate", hot: true },
-            { name: "VS Code", level: "Advanced" }
+            { name: "VS Code", level: "Advanced" },
+            { name: "Postman", level: "Intermediate", hot: true }
             ]
         }
     ],

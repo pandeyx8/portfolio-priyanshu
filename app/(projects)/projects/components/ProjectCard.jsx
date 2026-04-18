@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import { itemAnimation } from './Animations';
 
 export const ProjectCard = ({ project, index }) => (
@@ -12,12 +12,18 @@ export const ProjectCard = ({ project, index }) => (
     >
         <div className="sm:w-1/3">
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-                <img
-                    src={project.image}
-                    alt={project.title}
-                    loading="lazy"
-                    className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
-                />
+                {project.image ? (
+                    <img
+                        src={project.image}
+                        alt={project.title}
+                        loading="lazy"
+                        className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-300"
+                    />
+                ) : (
+                    <div className="w-full h-full bg-secondary/10 flex items-center justify-center">
+                        <FaGithub className="w-10 h-10 text-primary/80" />
+                    </div>
+                )}
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors duration-300" />
             </div>
         </div>
@@ -25,9 +31,16 @@ export const ProjectCard = ({ project, index }) => (
         <div className="sm:w-2/3 flex flex-col justify-between py-2">
             <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                    <h3 className="text-lg font-semibold text-primary">
-                        {project.title}
-                    </h3>
+                    <div className="flex items-center gap-2">
+                        <h3 className="text-lg font-semibold text-primary">
+                            {project.title}
+                        </h3>
+                        {project.pinned && (
+                            <span className="text-[10px] sm:text-xs px-2 py-0.5 rounded-full bg-primary text-primary-foreground">
+                                Pinned
+                            </span>
+                        )}
+                    </div>
                     <span className="text-xs text-muted-foreground">
                         #{String(index + 1).padStart(2, '0')}
                     </span>

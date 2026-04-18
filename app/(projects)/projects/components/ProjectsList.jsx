@@ -11,8 +11,10 @@ export const ProjectsList = ({ projects }) => (
         animate="show"
         className="space-y-4"
     >
-        {projects.map((project, index) => (
+        {[...(projects || [])]
+            .sort((a, b) => Number(Boolean(b.pinned)) - Number(Boolean(a.pinned)))
+            .map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
-        ))}
+            ))}
     </motion.div>
 );
