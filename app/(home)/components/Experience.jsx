@@ -95,63 +95,63 @@ const ExperienceSection = () => {
                                                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent shiny-sweep" />
                                                 </div>
-                                                
+
                                                 {/* Glossy shine effect */}
                                                 <div className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-300">
                                                     <div className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-white/40 to-transparent rounded-t-2xl" />
                                                 </div>
-                                                
+
                                                 <div className="relative z-10">
-                                                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
-                                                    <div>
-                                                        <h3 className="text-xl font-bold text-white mb-1">
-                                                            {exp.position}
-                                                        </h3>
-                                                        <p className="text-primary/80 font-medium">
-                                                            {exp.company}
+                                                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
+                                                        <div>
+                                                            <h3 className="text-xl font-bold text-white mb-1">
+                                                                {exp.position}
+                                                            </h3>
+                                                            <p className="text-primary/80 font-medium">
+                                                                {exp.company}
+                                                            </p>
+                                                        </div>
+                                                        <div className="flex items-center gap-2 text-sm text-white/70">
+                                                            <HiCalendar className="w-4 h-4" />
+                                                            <span>{exp.period}</span>
+                                                        </div>
+                                                    </div>
+
+                                                    {exp.location && (
+                                                        <p className="text-sm text-white/60 mb-4">
+                                                            {exp.location}
                                                         </p>
-                                                    </div>
-                                                    <div className="flex items-center gap-2 text-sm text-white/70">
-                                                        <HiCalendar className="w-4 h-4" />
-                                                        <span>{exp.period}</span>
-                                                    </div>
-                                                </div>
+                                                    )}
 
-                                                {exp.location && (
-                                                    <p className="text-sm text-white/60 mb-4">
-                                                         {exp.location}
-                                                    </p>
-                                                )}
+                                                    {exp.description && (
+                                                        <p className="text-sm text-white/70 leading-relaxed mb-4">
+                                                            {exp.description}
+                                                        </p>
+                                                    )}
 
-                                                {exp.description && (
-                                                    <p className="text-sm text-white/70 leading-relaxed mb-4">
-                                                        {exp.description}
-                                                    </p>
-                                                )}
+                                                    {exp.responsibilities && exp.responsibilities.length > 0 && (
+                                                        <ul className="space-y-2">
+                                                            {exp.responsibilities.map((responsibility, idx) => (
+                                                                <li key={idx} className="flex items-start gap-2 text-sm text-white/70">
+                                                                    <span className="text-white/40 mt-1.5">▸</span>
+                                                                    <span>{responsibility}</span>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    )}
 
-                                                {exp.responsibilities && exp.responsibilities.length > 0 && (
-                                                    <ul className="space-y-2">
-                                                        {exp.responsibilities.map((responsibility, idx) => (
-                                                            <li key={idx} className="flex items-start gap-2 text-sm text-white/70">
-                                                                <span className="text-white/40 mt-1.5">▸</span>
-                                                                <span>{responsibility}</span>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                )}
-
-                                                {exp.technologies && exp.technologies.length > 0 && (
-                                                    <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-white/10">
-                                                        {exp.technologies.map((tech, idx) => (
-                                                            <span
-                                                                key={idx}
-                                                                className="text-xs bg-white/10 text-white px-3 py-1 rounded-full border border-white/20"
-                                                            >
-                                                                {tech}
-                                                            </span>
-                                                        ))}
-                                                    </div>
-                                                )}
+                                                    {exp.technologies && exp.technologies.length > 0 && (
+                                                        <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-white/10">
+                                                            {exp.technologies.map((tech, idx) => (
+                                                                <span
+                                                                    key={idx}
+                                                                    className="text-xs bg-white/10 text-white px-3 py-1 rounded-full border border-white/20"
+                                                                >
+                                                                    {tech}
+                                                                </span>
+                                                            ))}
+                                                        </div>
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>

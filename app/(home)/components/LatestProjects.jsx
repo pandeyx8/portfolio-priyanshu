@@ -40,7 +40,7 @@ const languageColors = {
 
 const LatestProjects = () => {
     const allProjects = config.projects || [];
-    const latestOrder = [1, 4, 3];
+    const latestOrder = [3, 5, 4];
     const projects = latestOrder
         .map((id) => allProjects.find((project) => project.id === id))
         .filter(Boolean);

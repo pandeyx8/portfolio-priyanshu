@@ -34,15 +34,15 @@ const HeroSection = () => {
             className="max-w-4xl mx-auto text-center space-y-5"
           >
             {/* Welcome badge */}
-            <motion.div 
+            <motion.div
               className="flex justify-center"
               initial={{ opacity: 0, y: -8, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ 
-                duration: 0.5, 
+              transition={{
+                duration: 0.5,
                 delay: 0.1,
                 type: "spring",
-                stiffness: 200 
+                stiffness: 200
               }}
               whileHover={{ y: -2, scale: 1.02 }}
             >
@@ -56,15 +56,15 @@ const HeroSection = () => {
 
             {/* Heading */}
             <div className="space-y-3">
-              <motion.h1 
+              <motion.h1
                 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold tracking-tight leading-tight"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                <motion.span 
+                <motion.span
                   className="text-primary inline-block"
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.02,
                     textShadow: "0 0 30px rgba(59,130,246,0.5)"
                   }}
@@ -73,8 +73,8 @@ const HeroSection = () => {
                   Hi, I'm Priyanshu
                 </motion.span>
               </motion.h1>
-              
-              <motion.h2 
+
+              <motion.h2
                 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-white/70 leading-tight"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -85,7 +85,7 @@ const HeroSection = () => {
             </div>
 
             {/* Description */}
-            <motion.p 
+            <motion.p
               className="text-base sm:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto pt-2"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -95,7 +95,7 @@ const HeroSection = () => {
             </motion.p>
 
             {/* CTA Button */}
-            <motion.div 
+            <motion.div
               className="pt-4"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}

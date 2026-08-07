@@ -21,7 +21,8 @@ export const config = {
             image: "/projects/project-1.png",
             technologies: ["HTML", "CSS", "JavaScript"],
             github: "https://github.com/pandeyx8/frontend-clone--amazon-",
-            demo: "https://pandeyx8.github.io/frontend-clone--amazon-/"
+            demo: "https://pandeyx8.github.io/frontend-clone--amazon-/",
+
         },
         {
             id: 2,
@@ -39,92 +40,118 @@ export const config = {
             image: "/projects/color-change.png",
             technologies: ["HTML", "CSS", "JavaScript"],
             github: "https://github.com/pandeyx8/change-color-game",
-            demo: "https://color-change-game.vercel.app/"
+            demo: "https://color-change-game.vercel.app/",
+
         },
         {
             id: 4,
-            title: "Finance RBAC Backend",
-            description: "Backend API for a finance app with role-based access control, secure authentication, and protected routes for admin and user workflows.",
-            technologies: ["Node.js", "Express", "MongoDB", "JWT"],
+            title: "Finance Role-Based Management System",
+            description: "Built a secure backend implementing RBAC for Viewer, Analyst, and Admin roles with JWT-based authentication. Developed financial record and dashboard APIs with user-scoped data access, and enforced ownership-based authorization.",
+            technologies: ["Node.js", "Express.js", "MongoDB", "JWT"],
             github: "https://github.com/pandeyx8/finance-rbac-backend",
-            demo: "#",
+            demo: "#"
+        },
+        {
+            id: 5,
+            title: "Loan Management System",
+            description: "Architected a full-stack loan processing platform supporting 6 operational roles. Implemented a server-side Business Rule Engine (BRE) validating eligibility criteria and engineered REST APIs for the complete loan lifecycle.",
+            technologies: ["Next.js", "Express.js", "TypeScript", "MongoDB", "JWT"],
+            github: "https://github.com/pandeyx8/LMS",
+            demo: "https://lms-gold-kappa.vercel.app",
             pinned: true
         }
     ],
     skills: [
-    {
+        {
             title: "Programming & DSA",
             icon: <HiCode />,
             description: "Problem solving & core concepts",
             bgClass: "bg-blue-500/10",
             iconClass: "text-blue-500",
             skills: [
-            { name: "C++", level: "Intermediate", hot: true },
-            { name: "Data Structures & Algorithms", level: "Intermediate", hot: true },
-            { name: "STL", level: "Intermediate" }
+                { name: "C", level: "Advanced", hot: true },
+                { name: "C++", level: "Advanced", hot: true },
+                { name: "Python", level: "Intermediate" },
+                { name: "HTML/CSS", level: "Advanced" },
+                { name: "JavaScript", level: "Advanced", hot: true },
+                { name: "Data Structures & Algorithms", level: "Advanced", hot: true }
             ]
         },
         {
             title: "Web Development",
             icon: <HiDatabase />,
-            description: "Frontend technologies",
+            description: "Frontend & Backend technologies",
             bgClass: "bg-emerald-500/10",
             iconClass: "text-emerald-500",
             skills: [
-            { name: "HTML", level: "Advanced", hot: true },
-            { name: "CSS", level: "Advanced" },
-            { name: "JavaScript", level: "Intermediate" },
-            { name: "React", level: "Intermediate", hot: true },
-            { name: "Next.js", level: "Intermediate", hot: true },
-            { name: "Node.js", level: "Intermediate", hot: true },
-            { name: "Express", level: "Intermediate" },
-            { name: "MongoDB", level: "Intermediate" }
+                { name: "React.js", level: "Intermediate", hot: true },
+                { name: "Next.js", level: "Intermediate", hot: true },
+                { name: "Node.js", level: "Intermediate", hot: true },
+                { name: "Express.js", level: "Intermediate" },
+                { name: "Tailwind CSS", level: "Intermediate" },
+                { name: "MongoDB", level: "Intermediate" },
+                { name: "MySQL", level: "Intermediate" },
+                { name: "PostgreSQL", level: "Intermediate" },
+                { name: "REST APIs", level: "Intermediate", hot: true },
+                { name: "JWT Auth & RBAC", level: "Intermediate" }
             ]
         },
         {
             title: "Tools",
             icon: <HiCube />,
-            description: "Development tools",
+            description: "Development & Deployment tools",
             bgClass: "bg-orange-500/10",
             iconClass: "text-orange-500",
             skills: [
-            { name: "Git & GitHub", level: "Intermediate", hot: true },
-            { name: "VS Code", level: "Advanced" },
-            { name: "Postman", level: "Intermediate", hot: true }
+                { name: "Git", level: "Intermediate", hot: true },
+                { name: "GitHub", level: "Intermediate", hot: true },
+                { name: "Postman", level: "Intermediate" },
+                { name: "Vercel", level: "Intermediate" },
+                { name: "Render", level: "Intermediate" },
+                { name: "Netlify", level: "Intermediate" }
             ]
         }
     ],
     experiences: [
         {
-            position: "Campus Ambassador → Technical Intern",
+            position: "Intern",
             company: "TakeUForward (TUF)",
             period: "Jul 2025 – Oct 2025",
             location: "Remote",
             description:
-            "Completed a 3-month internship where I transitioned from a Campus Ambassador role into a technical contributor, working closely with the core TUF team.",
+                "Worked as a technical intern, developing and optimizing problems for structured learning tracks.",
             responsibilities: [
-            "Conducted pan-India online workshops and preparation sessions on Data Structures and Algorithms",
-            "Hosted interactive preparation sessions with the core TUF team to guide students nationwide",
-            "Mentored peers on solution design, code optimization, and competitive programming strategies",
-            "Contributed to technical presentations, hackathons, and developer outreach initiatives",
-            "Drove student engagement and promoted structured DSA learning pathways"
+                "Developed and optimized 100+ DSA problems for structured learning tracks at TakeUForward.",
+                "Designed 20+ edge-case test scenarios and validated solutions to ensure correctness and robustness.",
+                "Delivered an All-India hackathon session demonstrating how DSA improves solution design and optimization."
             ],
-            technologies: ["DSA", "Competitive Programming", "Workshops", "Mentorship", "Developer Outreach"]
+            technologies: ["DSA", "Competitive Programming", "Problem Setting", "Testing", "Solution Design"]
         },
         {
-            position: "Outreach Coordinator (Formerly Event Manager)",
+            position: "Outreach Lead (Former Event Manager)",
             company: "Arunoday Club, IIIT Bhopal",
-            period: "Dec 2023 – Present",
+            period: "Jul 2025 – Present",
             location: "Bhopal, India",
             description:
-            "Led outreach, planning, and execution of large-scale social and technical events at the institute level.",
+                "Led outreach and promotions for various events and workshops.",
             responsibilities: [
-            "Spearheaded planning and execution of social and technical events with 200+ participants",
-            "Managed logistics, volunteer teams, and event operations",
-            "Handled outreach and coordination to ensure smooth event execution",
-            "Demonstrated leadership, teamwork, and public speaking skills"
+                "Led outreach and promotions for 4+ events and workshops, increasing student participation and engagement.",
+                "Spearheaded planning and execution of social and technical events with 200+ participants.",
+                "Managed logistics, volunteer teams, and event operations."
             ],
-            technologies: ["Leadership", "Event Management", "Public Speaking", "Team Coordination"]
+            technologies: ["Leadership", "Event Management", "Outreach", "Team Coordination"]
+        },
+        {
+            position: "Content Lead",
+            company: "IIIT Bhopal Magazine Team",
+            period: "Dec 2025 – Present",
+            location: "Bhopal, India",
+            description:
+                "Led content planning, editing, and publication of the institute magazine.",
+            responsibilities: [
+                "Led content planning, editing, and publication of 2 institute magazine editions."
+            ],
+            technologies: ["Content Strategy", "Editing", "Publication", "Leadership"]
         }
     ],
     codingProfiles: [
@@ -132,15 +159,15 @@ export const config = {
             id: 1,
             platform: "LeetCode",
             username: "pandeyxd",
-            rating: "1700+",
-            stats: "",
+            rating: "Rank 405/30,000+",
+            stats: "Solved 700+ DSA problems",
             link: "https://leetcode.com/u/pandeyxd/"
         },
         {
             id: 2,
             platform: "CodeForces",
             username: "pandey_x8",
-            rating: "Pupil",
+            rating: "Pupil (1200+)",
             stats: "",
             link: "https://codeforces.com/profile/pandey_x8"
         },
@@ -148,16 +175,16 @@ export const config = {
             id: 3,
             platform: "Code Chef",
             username: "pandeyxd",
-            rating: "3-Star",
-            stats: "",
+            rating: "3-Star (1750+)",
+            stats: "Global Rank 73/24,000+ in Starters",
             link: "https://www.codechef.com/users/pandeyxd"
         },
         {
             id: 4,
             platform: "Codolio",
             username: "pandeyxd",
-            rating: "",
-            stats: "600+ Problems Solved",
+            rating: "Tech Fellowship",
+            stats: "Qualified AlgoUniversity 2024 (Top 1000/20000)",
             link: "https://codolio.com/profile/pandeyxd"
         },
         {
@@ -178,7 +205,7 @@ export const config = {
         }
     ],
     contactInfo: [
-     
+
         {
             icon: <FaGithub className="w-5 h-5" />,
             label: "GitHub",
